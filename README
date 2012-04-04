@@ -1,2 +1,4 @@
 Lancer le serveur
 mvn jetty:run
+
+url du projet : http://localhost:8080/CVtheque12/
