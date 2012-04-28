@@ -20,9 +20,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test do
-  gem 'cucumber-rails'
-end
+gem 'cucumber-rails', :group => [:development, :test]
+gem 'rspec-rails', :group => [:development, :test]
+gem 'factory_girl_rails', :group => [:development, :test]
 
 gem 'jquery-rails'
 
