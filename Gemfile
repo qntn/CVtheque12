@@ -23,6 +23,7 @@ end
 gem 'cucumber-rails', :group => [:development, :test]
 gem 'rspec-rails', :group => [:development, :test]
 gem 'factory_girl_rails', :group => [:development, :test]
+gem 'capybara', :group => [:development, :test]
 
 gem 'jquery-rails'
 

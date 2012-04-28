@@ -158,6 +158,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
   coffee-rails (~> 3.2.1)
   cucumber-rails
   factory_girl_rails
