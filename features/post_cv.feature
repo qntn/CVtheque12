@@ -13,3 +13,4 @@ Feature: Job seekers post their CVs
     Given I'm on the page "/users/1"
     When I click on "Choose CV"
     And I click on "Submit"
+    Then I should see "CV is uploaded"
