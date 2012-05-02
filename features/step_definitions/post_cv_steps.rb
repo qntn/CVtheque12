@@ -4,7 +4,8 @@ Given /^I'm on the page of a "([^"]*)"$/ do |arg1|
 end
 
 When /^I click on "([^"]*)"$/ do |arg1|
-  click_on arg1
+  f = Tempfile.new(['test', '.pdf'])
+  attach_file arg1, f.path
 end
 
 Then /^I should see "([^"]*)"$/ do |arg1|
