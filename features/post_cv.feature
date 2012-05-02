@@ -10,7 +10,7 @@ Feature: Job seekers post their CVs
     Then I should see "CV is uploaded"
 
   Scenario: Post a CV to found a job
-    Given I'm on the page "/users/1"
+    Given I'm on the page of a "user"
     When I click on "Choose CV"
     And I click on "Submit"
     Then I should see "CV is uploaded"
