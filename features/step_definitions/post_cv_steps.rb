@@ -1,5 +1,6 @@
 Given /^I'm on the page "([^"]*)"$/ do |arg1|
-  visit arg1
+  user = FactoryGirl.create(:user)
+  visit user
 end
 
 When /^I click on "([^"]*)"$/ do |arg1|
