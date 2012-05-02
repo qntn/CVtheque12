@@ -29,7 +29,7 @@ gem 'database_cleaner', :group => [:development, :test]
 gem 'jquery-rails'
 
 gem 'devise'
-
+gem 'haml'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
