@@ -3,8 +3,8 @@ Given /^I'm on the page of a "([^"]*)"$/ do |klass|
   visit user_path object
 end
 
-When /^I click on "([^"]*)"$/ do |tag_name|
-  click_on tag_name
+When /^I click on button "([^"]*)"$/ do |tag_name|
+  click_button tag_name
 end
 
 

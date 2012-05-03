@@ -12,5 +12,5 @@ Feature: Job seekers post their CVs
   Scenario: Post a CV to found a job
     Given I'm on the page of a "user"
     When I attach file "test.pdf" by clicking on "Choisir un CV"
-    And I click on "Submit"
+    And I click on button "Envoyer"
     Then I should see "CV is uploaded"
