@@ -1,11 +1,16 @@
-Given /^I'm on the page of a "([^"]*)"$/ do |arg1|
-  user = FactoryGirl.create(arg1)
-  visit user_path(user)
+Given /^I'm on the page of a "([^"]*)"$/ do |klass|
+  object = FactoryGirl.create klass
+  visit user_path object
 end
 
-When /^I click on "([^"]*)"$/ do |arg1|
-  f = Tempfile.new(['test', '.pdf'])
-  attach_file arg1, f.path
+When /^I click on "([^"]*)"$/ do |tag_name|
+  click_on tag_name
+end
+
+
+When /^I attach file "([^"]*)" by clicking on "([^"]*)"$/ do |file_name, tag_name|
+  f = Tempfile.new file_name
+  attach_file tag_name, f.path
 end
 
 Then /^I should see "([^"]*)"$/ do |arg1|
