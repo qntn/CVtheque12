@@ -9,10 +9,9 @@ When /^I attach file "([^"]*)" by clicking on "([^"]*)"$/ do |file_name, element
 end
 
 When /^I click on "([^"]*)"$/ do |element|
-  page.has_content? "Envoyer CV"
-  click_on "Envoyer CV"
+  click_on element
 end
 
 Then /^I should see "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  page.has_content? arg1
 end
