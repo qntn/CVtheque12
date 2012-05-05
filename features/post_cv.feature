@@ -13,4 +13,4 @@ Feature: Job seekers post their CVs
     Given I'm on the page of a "user"
     When I attach file "test.pdf" by clicking on "Choisir un CV"
     And I click on "Envoyer CV"
-    Then I should see "CV is uploaded"
+    Then I should see "Le CV a été téléchargé"
