@@ -10,7 +10,7 @@ Feature: Job seekers post their CVs
 #    Then I should see "CV is uploaded"
   @javascript
   Scenario: Post a CV to found a job
-    Given I'm on the page of a "user"
+    Given I'm on my settings form
     When I attach file "test.pdf" by clicking on "Choisir un CV"
     And I click on "Envoyer CV"
     Then I should see "Le CV a été téléchargé"

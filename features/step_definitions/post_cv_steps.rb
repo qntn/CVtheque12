@@ -1,6 +1,6 @@
-Given /^I'm on the page of a "([^"]*)"$/ do |klass|
-  object = FactoryGirl.create klass
-  visit user_path object
+Given /^I'm on my settings form$/ do
+  user = FactoryGirl.create :user
+  visit edit_user_path user
 end
 
 When /^I attach file "([^"]*)" by clicking on "([^"]*)"$/ do |file_name, element|
