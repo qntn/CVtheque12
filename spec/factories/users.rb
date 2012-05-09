@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :user do
-    email "lorem@ipsum.com"
-    password "dolorsitamet"
+    email Faker::Internet.email
+    password "loremipsum"
+    cv Tempfile.new "lorem.pdf"
   end
 end
