@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :user do
     email Faker::Internet.email
-    password "loremipsum"
-    cv Tempfile.new "lorem.pdf"
+    password 'loremipsum'
+    cv Rack::Test::UploadedFile.new("#{Rails.root}/spec/fixtures/cv1.pdf", 'application/pdf', true)
   end
 end
