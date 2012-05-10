@@ -5,4 +5,9 @@ describe UsersController do
     get "edit"
     response.should be_success
   end
+  it "should assign user" do
+    user = FactoryGirl.create :user
+    get "edit"
+    assigns(:user).should eq([user])
+  end
 end
