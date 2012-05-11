@@ -1,0 +1,33 @@
+!!!
+%html
+  %head{:lang => "en"}
+    %meta{:charset => "UTF-8"}
+    %title Cvtheque12
+    %meta{:content => "Cvtheque12", :name => "description"}
+    %meta{:content => "Cvtheque12", :lang => "fr", :name => "author"}
+    %meta{:content => "http://www.cvtheque12.com", :name => "identifier-url"}
+    = stylesheet_link_tag :application, :media => 'all'
+    = javascript_include_tag :application
+    = csrf_meta_tag
+    = favicon_link_tag "/favicon.ico"
+    %link{:href => "apple.png", :rel => "apple-touch-icon-precomposed"}
+  %body
+    %header.navbar.navbar-fixed
+      .navbar-inner
+        .container
+          = link_to "CVtheque12", root_path, :class => 'brand'
+          %ul.nav
+            %li
+              = link_to "Home", root_path
+            %li
+              = link_to "Settings", edit_user_path(User.first)
+    .container
+      - if notice
+        .alert.alert-success
+          = button_tag 'x', :class => 'close', 'data-dismiss' => 'alert'
+          %strong Bravo !
+          = notice
+      - if alert
+        .alert
+          = alert
+      = yield

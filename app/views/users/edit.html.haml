@@ -1,12 +1,10 @@
-.container
-  %h1
-    = 'Formulaire utilisateur'
-  = simple_form_for @user, :html => { :class => 'form-horizontal' } do |f|
-    %legend CV
-    .control-group
-      = f.label :cv, :class => 'control-label'
-      .controls
-        = f.file_field :cv
-    .form-actions
-      = f.submit "Envoyer CV", :class => 'btn-primary'
-  = "Le CV a été téléchargé"
+%h1
+  = 'Formulaire utilisateur'
+= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f|
+  %legend CV
+  .control-group
+    = f.label :cv, :class => 'control-label'
+    .controls
+      = f.file_field :cv
+  .form-actions
+    = f.submit "Envoyer CV", :class => 'btn-primary'

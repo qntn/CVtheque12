@@ -6,9 +6,10 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes :cv => params[:user][:cv]
-        redirect_to edit_user_url @user
+      flash[:notice] = "Le CV a ete telecharge"
+      redirect_to edit_user_url @user
     else
-        render :action => :edit
+      render :action => :edit
     end
   end
 
