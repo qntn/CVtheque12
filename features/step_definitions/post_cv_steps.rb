@@ -3,13 +3,13 @@ Given /^I'm on my settings form$/ do
   visit edit_user_path user
 end
 
-When /^I attach file "([^"]*)" by clicking on "([^"]*)"$/ do |file_name, element|
-  f = Tempfile.new file_name
-  attach_file element, f.path
+When /^I attach file test.pdf by clicking on Choisir un CV$/ do
+  #f = Tempfile.new 'test.pdf
+  attach_file 'user_cv', "#{Rails.root}/spec/fixtures/cv2.pdf"
 end
 
 When /^I click on "([^"]*)"$/ do |element|
-  click_on element
+  click_button element
 end
 
 Then /^I should see "([^"]*)"$/ do |arg1|

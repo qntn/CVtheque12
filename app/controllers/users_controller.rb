@@ -1,3 +1,4 @@
+# encoding: utf-8
 class UsersController < ApplicationController
   before_filter :set_user, :only => [:edit, :update]
 
@@ -6,7 +7,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes :cv => params[:user][:cv]
-      flash[:notice] = "Le CV a ete telecharge"
+      flash[:notice] = "Le CV a été téléchargé"
       redirect_to edit_user_url @user
     else
       render :action => :edit
