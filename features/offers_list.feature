@@ -3,7 +3,11 @@ Feature: People can show offers list
   In order to found a job
   I want to show the offer list
 
-  @javascript
-  Scenario: Show offer list on the home page
-    Given I'm on the homepage
-    Then I should see the offers list
+  Scenario Outline: Show offer list on the home page
+    Given There are "25" offers
+    When I'm go on the homepage
+    Then I should see the offers with title "<title>"
+  Examples:
+    | title  |
+    | offre1 |
+    | offre2 |

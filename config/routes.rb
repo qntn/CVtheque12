@@ -1,8 +1,10 @@
 Cvtheque12::Application.routes.draw do
+  resources :offers
+
   devise_for :users
   resources :users
 
-  root :to => "users#index"
+  root :to => "offers#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
