@@ -4,7 +4,6 @@ Given /^I'm on my settings form$/ do
 end
 
 When /^I attach file test.pdf by clicking on Choisir un CV$/ do
-  #f = Tempfile.new 'test.pdf
   attach_file 'user_cv', "#{Rails.root}/spec/fixtures/cv2.pdf"
 end
 
