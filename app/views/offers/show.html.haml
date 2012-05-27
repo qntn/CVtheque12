@@ -1,4 +1,7 @@
-= @offer.title
+%h2
+  = @offer.title
+%p
+  = @offer.description
 - if current_user.offers.include? @offer
   %p
     = 'Vous avez postulé à cette offre'
