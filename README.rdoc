@@ -4,8 +4,15 @@ Cette application a été développé avec la technique de développement ATDD.
 Le site est accessible à l'adresse http://pure-water-6489.herokuapp.com/
 
 == Pour commencer
+* Installer les gems
+    bundle install
 * Lancer le serveur
     rails server
+* Lancer les tests
+    * Rspec
+        bundle exec rspec
+    * Cucumber
+        bundle exec cucumber
 
 == Technologies utilisées
 * Tests Unitaires : Rspec
