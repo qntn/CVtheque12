@@ -1,4 +1,15 @@
-%ul
-- @offers.each do |o|
-  %li
-    = o.title
+%table.table
+  %thead
+    %tr
+      %th Numéro
+      %th Titre
+      %th Description
+  %tbody
+  - @offers.each do |o|
+    %tr
+      %td
+        = link_to o.id, o
+      %td
+        = link_to o.title, o
+      %td
+        = truncate(o.description, :length => 100, :separator => ' ')
