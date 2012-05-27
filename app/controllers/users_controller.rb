@@ -1,20 +1,15 @@
 # encoding: utf-8
 class UsersController < ApplicationController
-  before_filter :set_user, :only => [:edit, :update]
-
+  before_filter :authenticate_user!
   def edit
   end
 
   def update
-    if @user.update_attributes :cv => params[:user][:cv]
-      flash[:notice] = "Le CV a été téléchargé"
-      redirect_to edit_user_url @user
+    if current_user.update_attributes :cv => params[:user][:cv]
+      flash[:notice] = 'Le CV a été téléchargé'
+      redirect_to edit_user_url current_user
     else
       render :action => :edit
     end
-  end
-
-  def set_user
-    @user = User.find_by_email 'q.d@gmail.com'
   end
 end
