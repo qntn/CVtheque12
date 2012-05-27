@@ -3,7 +3,7 @@ Cvtheque12::Application.routes.draw do
   resources :offers
 
   devise_for :users
-  resources :users
+  resources :users, :only => [:update]
 
   root :to => "offers#index"
 

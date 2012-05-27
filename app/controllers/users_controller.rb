@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def update
     if current_user.update_attributes :cv => params[:user][:cv]
       flash[:notice] = 'Le CV a été téléchargé'
-      redirect_to edit_user_url current_user
+      redirect_to edit_user_registration_path
     else
       render :action => :edit
     end
