@@ -1,4 +1,5 @@
 Cvtheque12::Application.routes.draw do
+  resources :candidates
   resources :offers
 
   devise_for :users

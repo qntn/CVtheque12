@@ -9,4 +9,6 @@ describe User do
 
   it { should have_attached_file(:cv) }
   it { should validate_attachment_content_type(:cv).allowing('application/pdf').rejecting('text/plain', 'text/xml') }
+
+  it { should have_many(:offers).through(:candidates) }
 end

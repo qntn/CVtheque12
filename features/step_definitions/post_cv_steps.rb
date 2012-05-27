@@ -1,6 +1,6 @@
 Given /^I'm on my settings form$/ do
-  user = FactoryGirl.create :user
-  visit edit_user_path user
+  @user = FactoryGirl.create :user
+  visit edit_user_path @user
 end
 
 When /^I attach file test.pdf by clicking on Choisir un CV$/ do
@@ -8,9 +8,21 @@ When /^I attach file test.pdf by clicking on Choisir un CV$/ do
 end
 
 When /^I click on "([^"]*)"$/ do |element|
-  click_button element
+  click_on element
 end
 
-Then /^I should see "([^"]*)"$/ do |arg1|
-  page.should have_content arg1
+Then /^I should see "([^"]*)"$/ do |string|
+  page.should have_content string
+end
+
+Given /^I'm on an offer page$/ do
+  visit offer_path @offer
+end
+
+When /^I already uploaded my CV$/ do
+  @user.cv.should_not be_nil
+end
+
+When /^I should see the offer title$/ do
+  page.should have_content @offer.title
 end

@@ -7,4 +7,10 @@ describe OffersController do
     response.should be_success
     assigns(:offers).should eq(offers)
   end
+  it 'should get show' do
+    offer = FactoryGirl.create(:offer)
+    get :show, :id =>  offer.id
+    response.should be_success
+    assigns(:offer).should eq(offer)
+  end
 end

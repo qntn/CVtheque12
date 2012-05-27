@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :offers, :through => :candidates
+  has_many :candidates
   has_attached_file :cv
+
   validates :cv, :attachment_content_type => { :content_type => ['application/pdf'] }
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
