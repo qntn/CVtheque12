@@ -18,9 +18,17 @@
           = link_to "CVtheque12", root_path, :class => 'brand'
           %ul.nav
             %li
-              = link_to "Home", root_path
+              = link_to 'Home', root_path
             %li
-              = link_to "Settings"
+              - if user_signed_in?
+                = link_to 'Settings', edit_user_registration_path
+              - else
+                = link_to 'Register', new_user_registration_path
+            %li
+              - if user_signed_in?
+                = link_to 'Logout', destroy_user_session_path, :method => :delete
+              - else
+                = link_to 'Login', new_user_session_path
     .container
       - if notice
         .alert.alert-success
