@@ -11,3 +11,13 @@ Le site est accessible à l'adresse http://pure-water-6489.herokuapp.com/
 * Tests Unitaires : Rspec
 * Tests de validation : Cucumber + Capybara
 * Gestion utilisateurs : Devise
+* Template : Haml
+
+== Sources
+* http://haml.info/
+* http://rspec.info/
+* https://github.com/plataformatec/devise
+* https://github.com/jnicklas/capybara
+* http://cukes.info/
+* https://github.com/cucumber/cucumber
+* http://www.codeschool.com/
