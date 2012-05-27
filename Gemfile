@@ -7,6 +7,7 @@ gem 'devise'
 gem 'haml'
 gem 'paperclip'
 gem 'simple_form'
+gem 'factory_girl_rails'
 
 group :production do
   gem 'pg'
