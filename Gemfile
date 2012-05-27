@@ -2,12 +2,24 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
 
+gem 'jquery-rails'
+gem 'devise'
+gem 'haml'
+gem 'paperclip'
+gem 'simple_form'
+
 group :production do
   gem 'pg'
 end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'shoulda'
 end
 
 group :assets do
@@ -17,31 +29,3 @@ group :assets do
 end
 
 gem 'cucumber-rails', :group => [:test], :require => false
-gem 'rspec-rails', :group => [:development, :test]
-gem 'factory_girl_rails', :group => [:development, :test]
-gem 'capybara', :group => [:development, :test]
-gem 'database_cleaner', :group => [:development, :test]
-gem 'faker', :group => [:development, :test]
-gem 'shoulda', :group => [:development, :test]
-
-gem 'jquery-rails'
-
-gem 'devise'
-gem 'haml'
-gem 'paperclip'
-gem 'simple_form'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
