@@ -19,6 +19,7 @@ Le site est accessible à l'adresse http://pure-water-6489.herokuapp.com/
 * Tests de validation : Cucumber + Capybara
 * Gestion utilisateurs : Devise
 * Template : Haml
+* Design : Bootstrap
 
 == Sources
 * http://haml.info/
@@ -28,3 +29,4 @@ Le site est accessible à l'adresse http://pure-water-6489.herokuapp.com/
 * http://cukes.info/
 * https://github.com/cucumber/cucumber
 * http://www.codeschool.com/
+* http://twitter.github.com/bootstrap/
