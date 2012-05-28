@@ -2,8 +2,10 @@
   = @offer.title
 %p
   = @offer.description
-- if current_user.offers.include? @offer
-  %p
-    = 'Vous avez postulé à cette offre'
-- else
-  = link_to 'Postuler à cette offre', candidates_path(:candidate => { :offer_id => @offer } ), :method => :post
+
+- if current_user
+  -if current_user.offers.include?(@offer)
+    %p
+      = 'Vous avez postulé à cette offre'
+  - else
+    = link_to 'Postuler à cette offre', candidates_path(:candidate => { :offer_id => @offer } ), :method => :post
