@@ -30,6 +30,6 @@
           %p.help-block
             = "Vous avez déjà uploadé un CV. "
           %p
-            = link_to "Télécharger mon CV.", current_user.cv.url
+            = link_to "Télécharger mon CV.", current_user.cv.url(:original, false)
       .form-actions
         = f.submit "Envoyer CV", :class => 'btn-primary'
