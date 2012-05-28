@@ -28,6 +28,8 @@
         = f.file_field :cv
         - if current_user.cv?
           %p.help-block
-            = "Vous avez déjà uploadé un CV"
+            = "Vous avez déjà uploadé un CV. "
+          %p
+            = link_to "Télécharger mon CV.", current_user.cv.url
       .form-actions
         = f.submit "Envoyer CV", :class => 'btn-primary'
